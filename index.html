@@ -1,0 +1,191 @@
+<!--
+  Code contains html for the audio, form, cards, game info, instructions and help image.
+  
+  I, Rhagavy Rakulan, 000802106 certify that this material is my original work.  
+  No other person's work has been used without due acknowledgement. 
+
+  Name: Rhagavy Rakulan, Student#: 000802106
+  Date created: Sunday, November 8, 2020
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="vieport" content="width=device-width, initial-scale=1.0">
+        <title>ACNH Memory Game</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <!--body start-->
+    <body>
+        
+        <script src="js/game.js"></script>
+        <!--audio files-->
+        <audio id = "background">
+            <source src="sound/ACNH_12PM.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="aMatch">
+            <source src="sound/aMatch.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="noMatch">
+            <source src="sound/noMatch.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="youLose">
+            <source src="sound/youLose.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="winner">
+            <source src="sound/winner.mp3" type="audio/mpeg">
+        </audio>
+        <!--main start-->
+        <main>
+            <!--grid1-->
+            <div class="grid1"></div>
+            <!--grid2 start-->
+            <div class="grid2">
+                <!--game start-->
+                <section class="game" id="game">
+                    <!--cards with front and back images-->
+                    <div class="card" data-name="apple">
+                        <img class="front-face" src="images/item.png" alt="Apple"/>
+                        <img class="card-back" src="images/cardBack.jpg" alt="Back of Card"/>
+                    </div>
+                    <div class="card" data-name="apple">
+                        <img class="front-face" src="images/item.png" alt="Apple"/>
+                        <img class="card-back" src="images/cardBack.jpg" alt="Back of Card"/>
+                    </div>
+                    <div class="card" data-name="bell">
+                        <img class="front-face" src="images/bells.png" alt="Bell Bag"/>
+                        <img class="card-back" src="images/cardBack.jpg" alt="Back of Card"/>
+                    </div>
+                    <div class="card" data-name="bell">
+                        <img class="front-face" src="images/bells.png" alt="Bell Bag"/>
+                        <img class="card-back" src="images/cardBack.jpg" alt="Back of Card"/>
+                    </div>
+                    <div class="card" data-name="celeste">
+                        <img class="front-face" src="images/celeste.png" alt="Celeste"/>
+                        <img class="card-back" src="images/cardBack.jpg" alt="Back of Card"/>
+                    </div>
+                    <div class="card" data-name="celeste">
+                        <img class="front-face" src="images/celeste.png" alt="Celeste"/>
+                        <img class="card-back" src="images/cardBack.jpg" alt="Back of Card"/>
+                    </div>
+                    <div class="card" data-name="fossil">
+                        <img class="front-face" src="images/fossil.png" alt="Fossil"/>
+                        <img class="card-back" src="images/cardBack.jpg" alt="Back of Card"/>
+                    </div>
+                    <div class="card" data-name="fossil">
+                        <img class="front-face" src="images/fossil.png" alt="Fossil"/>
+                        <img class="card-back" src="images/cardBack.jpg" alt="Back of Card"/>
+                    </div>
+                    <div class="card" data-name="hyacinth">
+                        <img class="front-face" src="images/hyacinth.png" alt="Hyacinth"/>
+                        <img class="card-back" src="images/cardBack.jpg" alt="Back of Card"/>
+                    </div>
+                    <div class="card" data-name="hyacinth">
+                        <img class="front-face" src="images/hyacinth.png" alt="Hyacinth"/>
+                        <img class="card-back" src="images/cardBack.jpg" alt="Back of Card"/>
+                    </div>
+                    <div class="card" data-name="isabelle">
+                        <img class="front-face" src="images/isabelle.png" alt="Isabelle"/>
+                        <img class="card-back" src="images/cardBack.jpg" alt="Back of Card"/>
+                    </div>
+                    <div class="card" data-name="isabelle">
+                        <img class="front-face" src="images/isabelle.png" alt="Isabelle"/>
+                        <img class="card-back" src="images/cardBack.jpg" alt="Back of Card"/>
+                    </div>
+                    <div class="card" data-name="pitfall">
+                        <img class="front-face" src="images/pitfall.png" alt="Pitfall Seed"/>
+                        <img class="card-back" src="images/cardBack.jpg" alt="Back of Card"/>
+                    </div>
+                    <div class="card" data-name="pitfall">
+                        <img class="front-face" src="images/pitfall.png" alt="Pitfall Seed"/>
+                        <img class="card-back" src="images/cardBack.jpg" alt="Back of Card"/>
+                    </div>
+                    <div class="card" data-name="recipe">
+                        <img class="front-face" src="images/recipe.jpg" alt="Recipe"/>
+                        <img class="card-back" src="images/cardBack.jpg" alt="Back of Card"/>
+                    </div>
+                    <div class="card" data-name="recipe">
+                        <img class="front-face" src="images/recipe.jpg" alt="Recipe"/>
+                        <img class="card-back" src="images/cardBack.jpg" alt="Back of Card"/>
+                    </div>
+                    <div class="card" data-name="timtom">
+                        <img class="front-face" src="images/TimmyTommy.png" alt="Timmy and Tommy"/>
+                        <img class="card-back" src="images/cardBack.jpg" alt="Back of Card"/>
+                    </div>
+                    <div class="card" data-name="timtom">
+                        <img class="front-face" src="images/TimmyTommy.png" alt="Timmy and Tommy"/>
+                        <img class="card-back" src="images/cardBack.jpg" alt="Back of Card"/>
+                    </div>
+                    <div class="card" data-name="tomnook">
+                        <img class="front-face" src="images/tom.png" alt="Tom Nook"/>
+                        <img class="card-back" src="images/cardBack.jpg" alt="Back of Card"/>
+                    </div>
+                    <div class="card" data-name="tomnook">
+                        <img class="front-face" src="images/tom.png" alt="Tom Nook"/>
+                        <img class="card-back" src="images/cardBack.jpg" alt="Back of Card"/>
+                    </div>
+                </section>
+                <!--game end-->
+            </div>
+            <!--grid2 end-->
+
+            <!--grid3 start-->
+            <div class="grid3" id="info">
+                <h1 class="game-title" id="game-title">Match' Em Up!</h1>
+                <!--gameinfo start-->
+                <div class="game-info" id="game-info">
+                    Time Left: <span id="time-left"> 120</span>
+                </div>
+                <div class="game-info" id="game-info">
+                    Score: <span id="score"> 0</span>
+                </div>
+                <div class="game-info" id="game-info">
+                    Player:<span id="player-name"></span>
+                </div>
+                <!--gameinfo end-->
+            </div>
+            <!--grid3 end-->
+
+            <!--grid4 start-->
+            <div class="grid4" id="form-container">
+                <!--playerform start-->
+                <div id="player-form">
+                    <!--form start-->
+                    <div id="form">
+                        <h2 class="">Before you play. . .</h2>
+                        <form>
+                            <label for="player-name">Your name:</label>
+                            <input type="text" id="name" placeholder="your name is..." required>
+                            <label for = "age">Age:</label>
+                            <input type="number" id="age" value="10" required>
+                            <label for="colorpicker">Your favourite colour:</label>
+                            <input type="color" id="colorpicker" value="#ffaa0e">
+                            <input type="submit" value="Let's Play!">
+                            <img src="images/wrongInput.jpg" alt="Wrong input image" id="wrong-input" width="300" height="300" >
+                        </form>
+                    </div>
+                    <!--form end-->
+                </div>
+                <!--playerform end-->
+            </div>
+            <!--grid4 end-->
+
+            <!--grid 5 start-->
+            <div class="grid5">
+                <!--instructions-container start-->
+                <div id="instructions-container">
+                    <h1 id="heading"></h1>
+                    <p id="instruct1"></p>
+                    <p id="instruct2"></p>
+                    <p id="instruct3"></p>
+                    <div id="outcome"></div>
+                </div>
+                <!--instructions-container end-->
+                <img id="help" src="images/leafLogo.png" alt="Help Button" width="100" height="100">
+            </div>
+            <!--grid 5 end-->
+        </main>
+        <!--main end-->
+    </body>
+    <!--body end-->
+</html>

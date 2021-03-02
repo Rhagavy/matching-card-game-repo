@@ -1,0 +1,221 @@
+/*
+  I, Rhagavy Rakulan, 000802106 certify that this material is my original work.  
+  No other person's work has been used without due acknowledgement.   
+
+  Name: Rhagavy Rakulan, Student#: 000802106
+  Date created: Sunday, November 8, 2020
+
+  Source used: 
+  https://www.w3schools.com/howto/howto_css_flip_card.asp
+*/
+
+/*font for game*/
+@font-face{
+    font-family: "Joyful";
+    src: url("../fonts/FinkHeavy-_1_.woff");
+}
+/*reset margins*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*body style*/
+body{
+    /*height: 100vh;*/
+    background-image: url("../images/ACNH_island.jpg");
+    background-size: cover;
+    /*background-repeat: no-repeat;*/
+    font-family: Joyful, serif;   
+}
+/* game info visability*/
+#info{
+    visibility: hidden;
+}
+/* header 1 style*/
+h1{
+    color: #ffaa0e;
+    font-family: Joyful, serif;
+    text-align: center;
+    flex-wrap: wrap;
+    /**margin-left:70%;*/
+    text-shadow: -1px 1px 2.5px #000,
+    1px 1px 2.5px #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;
+    text-align: center;
+    font-size: 3.5em;
+}
+/*style for the game info*/
+.game-info{
+    color: #ffc34d;
+    text-shadow: -1px 1px 2.5px #000,
+    1px 1px 2.5px #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;
+    font-size: 2.5em;
+    margin-left: 20px;
+    
+}
+/*style for player's inputted name*/
+#player-name{
+    text-shadow: -1px 1px 2.5px #000,
+    1px 1px 2.5px #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;
+    font-size: 1em;
+}
+/*instruction's visability*/
+#instructions-container{
+    visibility: hidden;
+}
+/*instruction style*/
+#instructions{
+    text-align: center;
+}
+/*help button visibility and positioning*/
+#help{
+    visibility: hidden;
+    position: relative;
+    left: 65%;
+}
+/*game result font size*/
+#outcome{
+    font-size: 3em;
+}
+/*paragraph style*/
+p{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    text-shadow: -1px 1px 3.5px #000,
+    1px 1px 3.5px #000,
+    1px -1px 0px #000,
+    -1px -1px 0 #000;
+}
+/*header 2 style*/
+h2{
+    color: white;
+    font-family: Joyful, serif;
+    text-shadow: -1px 1px 2.5px #000,
+    1px 1px 2.5px #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
+
+/*game's positioning*/
+.grid2{
+    /*border:solid 30px coral;*/
+    border: solid 5px black;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+/*main's style*/
+main{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 1fr 2fr;
+}
+/*styling for form*/
+#player-form{
+    font-size: 2.5em;
+    width: 80%;
+    margin-left: 10%;
+    /*width: 20%;
+    height: 71%;
+    margin: 30px;
+    margin-top: 13%;*/
+    border: 10px solid black;  
+    border-radius: 30px; 
+    background-color: #ffe6b3;
+    
+}
+/*form content's style*/
+#form{
+    margin-left: 30px;
+    
+}
+/*form's visibility*/
+#form-container{
+    visibility: visible;
+}
+/*form's input style*/
+input[type=text],input[type=number],input[type=color],input[type=submit]{
+    display: block;
+    width: 80%;
+    font-family: Joyful,serif;
+    font-size: 0.7em;
+    text-align: center;    
+}
+/*style for wrong input image*/
+#wrong-input{
+    position: relative;
+    visibility: hidden;
+    left: 25%;
+    height: 10%;
+    width: 45%;
+    margin: 10px;   
+}
+/*game visibilty*/
+.game {
+    visibility: hidden;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+/*card style, allows card to have a 3d effect when flipped*/
+.card{
+    width: calc(20% - 10px);
+    height: calc(20% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition:transform 1s;
+    
+}
+/*style for card when clicked*/
+.card:active{
+    transform: scale(.90);
+    transition: transform .5;
+}
+/*flipping card*/
+.card.flip{
+    transform: rotateY(180deg);
+}
+/*front and back side of card. Allows them to be positioned ontop of each other
+ and back side/front side are allowed to be viewable
+*/
+.front-face,
+.card-back{
+    width: 100%;
+    height: 115%;
+    position: absolute;
+    border-radius: 10px;
+    background-color: lightblue;
+    backface-visibility: hidden;
+    
+}
+/*allows front side to be flipped so that it can be seen since it's backface visibilty is hidden. */
+.front-face{
+    transform: rotateY(180deg);
+}
+/*card's border*/
+.card-back{
+    border: 4px solid black;
+}
+/*responsiveness of grid*/
+@media(max-width:800px){
+    .grid2{
+        flex-direction: column;
+    }
+}
